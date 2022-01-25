@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandar_Bornare_HW1.zip", "Mandar_Bornare_HW1.zip\Mandar_Bornare_HW1.zip.csproj", "{53B2F890-9ACB-4EA4-9943-108226F993DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mandar_Bornare_HW1.zip", "Mandar_Bornare_HW1.zip\Mandar_Bornare_HW1.zip.csproj", "{53B2F890-9ACB-4EA4-9943-108226F993DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_2", "Task_2\Task_2.csproj", "{AC997814-0035-4BA1-95EE-1A261330F1CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{53B2F890-9ACB-4EA4-9943-108226F993DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53B2F890-9ACB-4EA4-9943-108226F993DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53B2F890-9ACB-4EA4-9943-108226F993DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC997814-0035-4BA1-95EE-1A261330F1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC997814-0035-4BA1-95EE-1A261330F1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC997814-0035-4BA1-95EE-1A261330F1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC997814-0035-4BA1-95EE-1A261330F1CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
