@@ -13,7 +13,7 @@ namespace Mandar_Bornare_HW1.zip
         {
 
             int cogs_quantity, gears_quanitity, Totalquantity = 0 ;
-            double sales_total, sales_markup, tax, discount,Total;
+            double sales_total, sales_markup, after_markup_sales_total = 0, tax_total, discount,Total;
             Console.WriteLine("Please input the number of Cogs you would like to buy");
             string ans1 = Console.ReadLine();
             cogs_quantity = Convert.ToInt32(ans1);
@@ -25,21 +25,49 @@ namespace Mandar_Bornare_HW1.zip
 
             if (Totalquantity < 16 && cogs_quantity <= 10 && gears_quanitity <= 10)
             {
-                sales_total = (cogs_quantity * whole_sale_cogs_price) + ((cogs_quantity * whole_sale_cogs_price) * normalmarkup) + (gears_quanitity * whole_sale_gears_price)
-                    + ((gears_quanitity * whole_sale_gears_price) * normalmarkup);
+                sales_total = (cogs_quantity * whole_sale_cogs_price) + (gears_quanitity * whole_sale_gears_price);
+                after_markup_sales_total = sales_total + sales_total * normalmarkup;
+                   
 
             }
             else if (Totalquantity < 16 && cogs_quantity > 10 && gears_quanitity <= 10)
             {
-                sales_total = (cogs_quantity * whole_sale_cogs_price) + ((cogs_quantity * whole_sale_cogs_price) * discount_markup) + (gears_quanitity * whole_sale_gears_price)
-                    + ((gears_quanitity * whole_sale_gears_price) * normalmarkup);
+                sales_total = (cogs_quantity * whole_sale_cogs_price) + (gears_quanitity * whole_sale_gears_price);
+                after_markup_sales_total = sales_total + sales_total * discount_markup;
+                    
             }
             else if (Totalquantity < 16 && cogs_quantity <=10 && gears_quanitity >10)
             {
-                sales_total = (cogs_quantity * whole_sale_cogs_price) + ((cogs_quantity * whole_sale_cogs_price) * normalmarkup) + (gears_quanitity * whole_sale_gears_price)
-                    + ((gears_quanitity * whole_sale_gears_price) * discount_markup);
-            }
+                sales_total = (cogs_quantity * whole_sale_cogs_price) + (gears_quanitity * whole_sale_gears_price);
+                after_markup_sales_total = sales_total + sales_total * discount_markup;
 
+                    
+            }
+            else if (Totalquantity >=16 && cogs_quantity > 10 && gears_quanitity >10)
+            {
+                sales_total = (cogs_quantity * whole_sale_cogs_price) + (gears_quanitity * whole_sale_gears_price);
+                after_markup_sales_total = sales_total + sales_total * discount_markup;
+            }
+            else if (Totalquantity >=16 && cogs_quantity <= 10 && gears_quanitity <=10)
+            {
+                sales_total = (cogs_quantity * whole_sale_cogs_price) + (gears_quanitity * whole_sale_gears_price);
+                after_markup_sales_total = sales_total + sales_total * discount_markup;
+            }
+            else if (Totalquantity >=16 && cogs_quantity <=10 && gears_quanitity >10)
+            {
+                sales_total = (cogs_quantity * whole_sale_cogs_price) + (gears_quanitity * whole_sale_gears_price);
+                after_markup_sales_total = sales_total + sales_total * discount_markup;
+            }
+            else if (Totalquantity >=16 && cogs_quantity >10 && gears_quanitity <=10)
+            {
+                sales_total = (cogs_quantity * whole_sale_cogs_price) + (gears_quanitity * whole_sale_gears_price);
+                after_markup_sales_total = sales_total + sales_total * discount_markup;
+            }
+            tax_total = after_markup_sales_total * sales_tax;
+            Total = after_markup_sales_total + tax_total;
+            Console.WriteLine($" the subtotal of your order is {after_markup_sales_total} ");
+            Console.WriteLine($"The tax on your order is {tax_total}");
+            Console.WriteLine($"The Grand total of your order is {Total}");
         }
     }
 }
