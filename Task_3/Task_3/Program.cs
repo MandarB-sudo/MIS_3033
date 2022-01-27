@@ -28,7 +28,7 @@ namespace Task_3
                 sum+= grades[i];
             }
             avg = sum / grades.Count;
-
+             
             Console.WriteLine(avg);
         }
     }
