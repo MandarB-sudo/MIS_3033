@@ -27,9 +27,9 @@ namespace Task_3
             {
                 sum+= grades[i];
             }
-            avg = sum / grades.Count;
+            avg = (sum / grades.Count)/ 100;
              
-            Console.WriteLine(avg);
+            Console.WriteLine($"The avg of your exam score is {avg.ToString("P2")}");
         }
     }
 }
