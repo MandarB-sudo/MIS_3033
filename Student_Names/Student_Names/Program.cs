@@ -19,21 +19,19 @@ namespace Student_Names
      
                 Console.WriteLine("Please enter the name of Student ");
                 userinput = Console.ReadLine();
-                ListofStudents.Add(userinput);
+                if (userinput!= "-1")
+                {
+                    ListofStudents.Add(userinput);
+                }
+              
         } while (ListofStudents.Count <=35 && userinput!= "-1");
-                
-            
-               
 
 
-
-
-
-           
+            ListofStudents.Sort();
             
             foreach (var student in ListofStudents)
             {
-              
+            
                 Console.WriteLine(student);
             }
             Console.WriteLine($"The number of students is {ListofStudents.Count}");
