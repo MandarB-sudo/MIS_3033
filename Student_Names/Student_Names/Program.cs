@@ -43,7 +43,7 @@ namespace Student_Names
                    
             }
             avg = lenghtofname / ListofStudents.Count;
-            Console.WriteLine($"The avg lenght of name is {avg}");
+            Console.WriteLine($"The avg length  of  students' name is {avg}");
     
         }
     }
