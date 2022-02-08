@@ -56,6 +56,8 @@ namespace Task_3_Hw_2
         {
             const double standardmarkup = 0.15;
             const double discountmarkup = 0.125;
+            CogPrice = 79.99;
+            GearPrice = 250.00;
             int TotalQuantity = CogQuantity + GearQuantity;
             double netamount;
             if (CogQuantity > 10 || GearQuantity >10 || TotalQuantity >=16 )
