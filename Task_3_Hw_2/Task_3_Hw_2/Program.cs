@@ -20,8 +20,7 @@ namespace Task_3_Hw_2
 
             Receipt customer = new Receipt(ID, cogamount, gearamount);
 
-            
-
+            Console.WriteLine(PrintReceipt());
                 
 
         }

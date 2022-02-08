@@ -40,12 +40,7 @@ namespace Task_3_Hw_2
             Total = CalculateNetAmount() + CalculateTaxAmount();
             return Total;
         }
-        public void PrintReceipt()
-        {
-            Console.WriteLine($" Customer ID: {CustomerID} \n  The no. of Cogs  :{CogQuantity} \n The no. of Gears : {GearQuantity} \n The Price of the order is {CalculateNetAmount().ToString("C")} \n" +
-                $" The Tax applied is : {CalculateTaxAmount().ToString("C")} \n The Total price is : {CalculateTotal().ToString("C")} \n {SaleDate}");
-                 
-        }
+        
         private double CalculateTaxAmount()
         {
             double SalesTaxTotal;
@@ -71,8 +66,13 @@ namespace Task_3_Hw_2
                 return netamount;
             }
 
+            void PrintReceipt()
+            {
+                string message = $" Customer ID: {CustomerID} \n  The no. of Cogs  :{CogQuantity} \n The no. of Gears : {GearQuantity} \n The Price of the order is {CalculateNetAmount().ToString("C")} \n" +
+                    $" The Tax applied is : {CalculateTaxAmount().ToString("C")} \n The Total price is : {CalculateTotal().ToString("C")} \n {SaleDate}";
 
-            
+            }
+
         }
         public override string ToString()
         {
